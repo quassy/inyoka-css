@@ -1,0 +1,244 @@
+/*
+Author: Quassy
+http://wiki.ubuntuusers.de/Benutzer/Quassy
+License: CC BY-SA 4.0
+http://creativecommons.org/licenses/by-sa/4.0/
+*/
+@charset "UTF-8";
+@-moz-document domain("ubuntuusers.de") {
+/* Hintergrund */
+div.wrap {
+    background:#eee url(' http://media.cdn.ubuntu-de.org/wiki/attachments/24/05/head.png ') repeat-x 0 0 !important;
+    border:1px solid #fff !important;
+    border-radius:0 !important;
+    -moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    border-style:none solid !important;
+    margin:0 10px !important;
+    box-shadow: 0 0 5px #666 !important;
+    -moz-box-shadow: 0 0 5px #666 !important;
+    -webkit-box-shadow: 0 0 5px #666 !important;
+
+}
+body {
+    background:#fff url(' http://media.cdn.ubuntu-de.org/wiki/attachments/31/05/background.png ') !important;
+    font-family:'Ubuntu' !important;
+}
+/* Kopfzeile */
+.header {
+    clear:both;
+    height:75px;
+}
+.header h1 a {
+    background:url(' http://media.cdn.ubuntu-de.org/wiki/attachments/11/05/logo.png ') no-repeat center center !important;
+    background-size:228px 56px;
+    margin:0 !important;
+    width:228px !important;
+    height:56px !important;
+    padding:9px 20px 10px !important;
+}
+/* Hauptmenue */
+.tabbar {
+    top:0 !important;
+    height:75px !important;
+}
+.tabbar li {
+    padding:0 !important;
+    border-left:1px solid rgba(255,255,255,0.1) !important;
+}
+.tabbar li:last-child {
+    border-right:1px solid rgba(255,255,255,0.1) !important;
+}
+.tabbar .tab_left, .tabbar .tab_right {
+    display:none !important;
+}
+.tabbar .tab_center {
+    height:auto !important;
+    background:none !important;
+}
+.tabbar li span {
+    position:relative !important;
+    top:-45px !important;
+}
+.tabbar li a {
+    height:35px !important;
+    width:80px !important;
+    color:#eee !important;
+    text-align:center !important;
+    text-shadow:rgba(0,0,0,0.5) 0px 1px 2px;
+    padding:0 !important;
+    padding-top:40px !important;
+    font-weight:normal !important;
+}
+.tabbar li:hover a, .tabbar li.active a {
+    color:#fff !important;
+}
+
+/* Aktiver Bereich */
+.tabbar li.active {
+    background-color:rgba(255,255,255,0.1) !important;
+    border-left:1px solid rgba(255,255,255,0.3) !important;
+    background-image:none !important;
+}
+.tabbar li.active + li {
+    border-left:1px solid rgba(255,255,255,0.3) !important;
+}
+.tabbar li.active:last-child {
+    border-right:1px solid rgba(255,255,255,0.3) !important;
+}
+/* Hover-Bereich */
+.tabbar li:hover {
+    background-color:rgba(255,255,255,0.2) !important;
+    border-left:1px solid rgba(255,255,255,0.5) !important;
+    background-image:none !important;
+}
+.tabbar li:hover + li {
+    border-left:1px solid rgba(255,255,255,0.5) !important;
+}
+.tabbar li:hover:last-child {
+    border-right:1px solid rgba(255,255,255,0.5) !important;
+}
+/* Footer */
+.footer {
+    clear:both !important;
+    background:#eee url(' http://media.cdn.ubuntu-de.org/wiki/attachments/23/05/foot.png ') repeat-x !important;
+}
+.footer a[href="http://ubuntuusers.de/inyoka/"]:after {
+    content:" Closed Source";
+}
+/* Haupt */
+.body {
+    clear:both;
+}
+/* Links */
+a, a:link {
+    color:#C25013 !important;
+    color:#DB5B16 !important;
+    text-decoration:none !important;
+}
+a:visited {
+    color:#a84611 !important;
+    color:#C25013 !important;
+}
+a:hover {
+    text-decoration:underline !important;
+}
+a:focus {
+    outline:1px dotted #c24400;
+}
+/* Farblose Links */
+.pathbar a, .pathbar a:visited, 
+.navi_global li a, .navi_global li a:visited, 
+.mod_navi li a, .mod_navi li a:visited, 
+.postinfo a, .postinfo a:visited, 
+.topic_box_content a, .topic_box_content a:visited,
+.navi_sidebar a, .navi_sidebar a:visited {
+    color:#333 !important;
+}
+/* Persoenliches Menue */
+.navi_global {
+    font-size:0.9em !important;
+}
+/* Pathbarzeugs */
+.pathbar > div {
+    margin:0 !important;
+    padding:0 !important;
+}
+.pathbar .dropdown {
+    width:200px !important;
+}
+/* Doppelte Foren-/Threadueberschrift und ueberfluessige Nutzerinfos */
+.topic_box h2,
+p.username ~ p, 
+.forum .category {
+    display:none !important;
+}
+/* Forenuebersicht */
+tr.head th {
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#cacaca)) !important;
+}
+tr.head th a {
+    color:#333 !important
+}
+td.icon {
+    background:transparent url(' http://media.cdn.ubuntu-de.org/wiki/attachments/30/05/folder.png ') no-repeat center !important;
+    background-size:32px 32px;
+}
+td.icon > img {
+    display:none !important;
+}
+td.icon .icon {
+    background:none !important;
+}
+.forum.category_box td {
+    border:none !important;
+}
+.forum.category_box tr {
+    background-image:url(' http://media.cdn.ubuntu-de.org/wiki/attachments/12/05/shadow_top.png ');
+    background-repeat:repeat-x !important;
+    border:1px solid #ccc !important;
+}
+/* Hauptueberschrift */
+.appheader h1, .appheader h1 a, .appheader h2, .appheader h1:after {
+    font-family:'Ubuntu' !important;
+    font-weight:normal !important;
+    color:#DD4814 !important;
+    margin:0 !important;
+}
+.appheader h1 {
+    font-size:2em !important;
+}
+/* Suche */
+form.search > ul + div, form.search > div:first-child {
+    border:1px solid #e7e7e7 !important;
+    outline:1px solid #a6a6a6 !important;
+    height:16px;
+}
+form.sarch > div > * {
+    display:inline-block;
+}
+form.search input {
+    border:none !important;
+}
+form.search .search_submit {
+    border:none !important;
+    background-image:url(' http://media.cdn.ubuntu-de.org/wiki/attachments/22/05/submit.png ') !important;
+}
+/* Inhalt */
+.content {
+    background-color:transparent;
+}
+.content > .topic, 
+.content > .forum {
+    background-color:#fff;
+}
+/* */
+pre {
+    font-family:"Ubuntu Mono";
+
+}
+/* Paste */
+body > pre {
+    background:#eee; 
+    font-size:.9em;
+    padding:.5em;
+    border:1px solid #aaa;
+}
+/* Hotfix Planet */
+.contents img[src="http://www.pirates-of-art.de/wp-content/uploads/ubuntu-pirates-150x150.jpg"], 
+.contents .wpptopdfenh {
+    display:none;
+}
+.contents table.bash {
+    background:#eee;
+  }
+.contents table.bash td, 
+.contents table.bash td pre {
+    border:0;
+}
+.contents table.bash td.ln {
+    width:5%;
+    border-right:1px solid #ccc;
+    text-align:right;
+}
+}/* /@-moz-document */

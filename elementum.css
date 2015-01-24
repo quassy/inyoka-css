@@ -1,0 +1,224 @@
+/*
+Author: Quassy
+http://wiki.ubuntuusers.de/Benutzer/Quassy
+License: CC BY-SA 4.0
+http://creativecommons.org/licenses/by-sa/4.0/
+*/
+@charset "UTF-8";
+@-moz-document domain("ubuntuusers.de") {
+/* General */
+html, body {
+    background-color: #fff;
+    background-image: url(http://elementaryos.org/img/nav-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -30px;
+    font-family: 'Open Sans', 'Droid Sans', sans-serif !important; 
+}
+div.wrap {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+::selection {
+    color: #fff;
+    background: #47A8E9;
+}
+a {
+    color: #005CFF !important;
+    text-decoration: none !important;
+}
+    
+/* Header */
+div.header, 
+div.header > *, 
+div.header > * > * {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+div.header {
+    background: #eee;
+    background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 940px;
+    height: 50px;
+    margin: 18px auto 34px;
+    align-items: stretch;
+    line-height: 34px;
+    box-shadow: 0 0 3px rgba(0,0,0,.15);
+}
+div.header * {
+    float:none !important;
+    padding:0 !important;
+    margin:0 !important;
+    height:auto !important;
+}
+/* Logo */
+div.header h1 a {
+    height:34px !important;
+    width:32px;
+    margin: 0 20px !important;
+    background-image: url("http://elementaryos.org/img/navsprite.png") !important;;
+    background-repeat: no-repeat;
+    background-position: 0 -108px;
+}
+div.header h1 a:hover {
+    background-position: 0 -261px;
+}
+/* Links */
+div.header ul.tabbar {
+    left: 0;
+    top: 0;
+}
+div.header span {
+    display:none !important;
+}
+div.header .tab_left, 
+div.header .tab_right {
+    display:none;
+}
+div.header .tab_center {
+    background: transparent !important;
+}
+div.header .tab_center a {
+    padding: 0 20px !important;
+    font-weight: normal;
+    color: #000;
+}
+div.header li {
+    height: 48px !important;
+}
+div.header li:before {
+    display:block;
+    width:1px;
+    height:48px;
+    content:" ";
+}
+div.header li:before {
+    background:linear-gradient(to bottom, #fff 0%,#ccc 50%,#eee 100%); 
+    box-shadow:1px 0 #fff;
+}
+div.header li.active:before,
+div.header li.active + li:before {
+    display:none;
+}
+div.header li.active {
+    background: #f0f0f0;
+    border: 1px solid #bbb;
+}
+    
+/* Hauptüberschrift */
+.appheader h1 {
+    font-size:32px;
+    font-weight:600;
+}
+.appheader .separator:after {
+    color: #999 !important;
+}
+.appheader h1 a {
+    color:#333 !important;
+}
+.appheader h2 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 !important;
+}
+.appheader h2 a {
+    color: #4d4d4d !important;
+}
+/* Fußzeile */
+.footer {
+    background:#333;
+    color:#fff;
+    background: linear-gradient(to bottom, #111 0%,#333 10px);
+}
+/* Inhalt */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+    font-family:'Raleway', 'Open Sans', sans-serif;
+    font-weight:normal !important;
+    color:#000 !important;
+    border-color:#ccc;
+}
+h3 {
+    font-size:1.5em;
+    border-bottom-color:#ccc;
+}
+/* Portal */
+.container.get_ubuntu {
+    background:#fea;
+}
+.container.calendar {
+    background:#ecf;
+}
+.navi_sidebar .container,
+.calendar div.calendar.overview, 
+.navi_sidebar h3{
+    border-radius:0;
+    border-color:#bbb;
+}
+/* Suchfeld 
+*fuglyhack* 
+support for dropdown
+*/
+form.search {
+    position: absolute;
+    top: -143px;
+    /* right: 100px; */
+    width: 100%;
+    margin: 0 auto; 
+    pointer-events:none;
+}
+form.search > div {
+    width: 910px;
+    margin: 0 auto;
+    text-align: right;
+}
+form.search input[name="query"] {
+    padding: 5px 5px 5px 25px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-position: 5px 5px;
+    width: 200px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 1px #fff;
+  pointer-events:auto;
+}
+form.search input[name="query"]:active,
+form.search input[name="query"]:focus {
+    background-color:#fff; 
+    border-color:#005CFF;
+    outline:0;
+}
+.search_expander, 
+form.search input[type="submit"] {
+    display:none;
+}
+/* Forum Tabellenköpfe */
+table tr.head th {
+    color:#000 !important;
+    font-weight:normal;
+    font-size:18px;
+    background:none;
+    text-align:left;
+    padding:.9em .6em .3em .6em !important;
+    border:none !important;
+}
+table.forum a.collapse:not(.collapsed) {
+    display:none;
+}
+.toc {
+    border-radius:0;
+    border:1px solid #ccc;
+}
+/* Doppelte Foren-/Threadueberschrift und ueberfluessige Nutzerinfos */
+.topic_box h2,
+p.username ~ p, 
+.forum .category {
+    display:none !important;
+}
+}/* /@-moz-document */
